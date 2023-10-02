@@ -19,7 +19,7 @@ namespace inlämningsuppgift3_5
             int multiplikation = y * R;
             Console.WriteLine("Multiplikation: " + multiplikation);
             int division = y / R;
-            Console.WriteLine("Division: " + division);
+            Console.WriteLine("Division: " + division);//
         }
     }
 }
