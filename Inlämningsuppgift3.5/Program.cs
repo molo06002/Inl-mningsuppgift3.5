@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading.Channels;
+
 namespace inlämningsuppgift3_5
 {
     class Program
@@ -12,14 +14,33 @@ namespace inlämningsuppgift3_5
             string r = Console.ReadLine();
             int R = Convert.ToInt32(r);
             int addition = y + R;
-            Console.Clear();
-            Console.WriteLine("Addition: " + addition);
             int subtraktion = y - R;
-            Console.WriteLine("Subtraktion: " + subtraktion);
             int multiplikation = y * R;
-            Console.WriteLine("Multiplikation: " + multiplikation);
             int division = y / R;
-            Console.WriteLine("Division: " + division);//
+            Console.WriteLine("Välj en kalkulation: ");
+            Console.WriteLine("Addition");
+            Console.WriteLine("Subtraktion");
+            Console.WriteLine("Multiplikation");
+            Console.WriteLine("Division");
+            string s = Console.ReadLine();
+            Console.Clear();
+            if (s == "Addition")
+            {
+                Console.WriteLine("Svar: " + addition);
+            }
+            if (s == "Subtraktion")
+            {
+                Console.WriteLine("Svar: " + subtraktion);
+            }
+            if (s == "Multiplikation")
+            {
+                Console.WriteLine("Svar: " + multiplikation);
+            }
+            else
+            {
+                Console.WriteLine("Svar: " + division);
+            }
+
         }
     }
 }
