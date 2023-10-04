@@ -18,29 +18,31 @@ namespace inlämningsuppgift3_5
             int multiplikation = y * R;
             int division = y / R;
             Console.WriteLine("Välj en kalkulation: ");
-            Console.WriteLine("Addition");
-            Console.WriteLine("Subtraktion");
-            Console.WriteLine("Multiplikation");
-            Console.WriteLine("Division");
+            Console.WriteLine("1. Addition");
+            Console.WriteLine("2. Subtraktion");
+            Console.WriteLine("3. Multiplikation");
+            Console.WriteLine("4. Division");
             string s = Console.ReadLine();
+            int o = Convert.ToInt32(s);
             Console.Clear();
-            if (s == "Addition")
+            switch (o)
             {
-                Console.WriteLine("Svar: " + addition);
+                case 1:
+                    Console.WriteLine("Svar: " + addition);
+                    break;
+                case 2:
+                    Console.WriteLine("Svar: " + subtraktion);
+                    break;
+                case 3:
+                    Console.WriteLine("Svar: " + multiplikation);
+                    break;
+                case 4:
+                    Console.WriteLine("Svar: " + division);
+                    break;
+                default:
+                    Console.WriteLine("Du valde ingen av alternativen ovanför");
+                    break;
             }
-            if (s == "Subtraktion")
-            {
-                Console.WriteLine("Svar: " + subtraktion);
-            }
-            if (s == "Multiplikation")
-            {
-                Console.WriteLine("Svar: " + multiplikation);
-            }
-            else
-            {
-                Console.WriteLine("Svar: " + division);
-            }
-
         }
     }
 }
